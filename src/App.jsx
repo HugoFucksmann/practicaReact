@@ -1,12 +1,11 @@
-import MarketHeader from "./components/marketHeader";
-import HomePage from "./pages/homePage";
+import AppProvider from "./context/appContext";
+import RootRouter from "./rootRouter";
 
 const App = () => {
   return (
-    <div>
-      <MarketHeader />
-      <HomePage />
-    </div>
+    <AppProvider>
+      <RootRouter />
+    </AppProvider>
   );
 };
 

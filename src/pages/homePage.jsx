@@ -1,27 +1,5 @@
 import { useEffect, useState } from "react";
-
-async function getProductos() {
-  const productos = await fetch("http://localhost:3012/api/productos", {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  })
-    .then((res) => res.json())
-    .then((res) => {
-      if (!res.ok) {
-        return null;
-      }
-
-      return res.productos;
-    })
-    .catch((e) => {
-      console.warn("error: ", e);
-      return null;
-    });
-
-  return productos;
-}
+import { getProductos } from "../utils/consultasFetch";
 
 const HomePage = () => {
   const [loading, setLoading] = useState(true);
@@ -79,12 +57,14 @@ const styles = {
   },
   cardProduct: {
     margin: 16,
+    borderRadius: 8,
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     height: 180,
     width: 120,
-    backgroundColor: "grey ",
+    boxShadow: "3px 3px 5px grey",
+    backgroundColor: "#dbdbdb ",
   },
 };
 
