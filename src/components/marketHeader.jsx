@@ -6,7 +6,7 @@ function handleNavigation(path) {
   window.location.href = `/${path}`;
 }
 
-const MarketHeadeer = () => {
+const MarketHeader = () => {
   return (
     <div style={styles.containerHeader}>
       <div style={styles.menu}>
