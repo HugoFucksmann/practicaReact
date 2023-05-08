@@ -1,8 +1,12 @@
+kdfkfwefjjwefs
+
+
+
 function handleNavigation(path) {
   window.location.href = `/${path}`;
 }
 
-const MarketHeader = () => {
+const MarketHeadeer = () => {
   return (
     <div style={styles.containerHeader}>
       <div style={styles.menu}>
