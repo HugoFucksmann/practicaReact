@@ -1,10 +1,13 @@
 import AppProvider from "./context/appContext";
+import UserProvider from "./context/userContext";
 import RootRouter from "./rootRouter";
 
 const App = () => {
   return (
     <AppProvider>
-      <RootRouter />
+      <UserProvider>
+        <RootRouter />
+      </UserProvider>
     </AppProvider>
   );
 };

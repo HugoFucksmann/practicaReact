@@ -1,13 +1,23 @@
-kdfkfwefjjwefs
-
-fjdkf
-
+import { useContext } from "react";
+import { AppContext } from "../context/appContext";
+import { userContext } from "../context/userContext";
 
 function handleNavigation(path) {
   window.location.href = `/${path}`;
 }
 
+const footer = () => {
+  const { handleLogOut } = useContext(userContext);
+  return (
+    <>
+      <button onClick={() => handleLogOut()}>LOGOUT</button>
+    </>
+  );
+};
+
 const MarketHeader = () => {
+  const { handleLogOut } = useContext(userContext);
+
   return (
     <div style={styles.containerHeader}>
       <div style={styles.menu}>
@@ -25,6 +35,9 @@ const MarketHeader = () => {
           onClick={() => handleNavigation("Productos")}
         >
           Productos
+        </button>
+        <button style={styles.button} onClick={() => handleLogOut()}>
+          LogOut
         </button>
       </div>
       <div style={styles.logoContainer}>
