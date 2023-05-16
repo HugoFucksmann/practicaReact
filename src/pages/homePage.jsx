@@ -37,7 +37,6 @@ const HomePage = () => {
 
 const CardProducto = (props) => {
   const { dataProducto } = props;
-
   return (
     <div style={styles.divProductos}>
       <div style={styles.cardProduct}>

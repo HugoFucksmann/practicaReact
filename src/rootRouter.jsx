@@ -20,7 +20,7 @@ const RootRouter = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/settings" element={<SettingsScreen />} />
         <Route path="/productos" element={<ProductosComp />} />
-        <Route path="/login" element={<LoginScreen />} />
+        {/*  <Route path="/login" element={<LoginScreen />} /> */}
 
         <Route path="*" element={<Navigate replace to="/" />} />
       </Routes>
